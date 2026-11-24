@@ -30,8 +30,12 @@ export default defineParams({
   },
   careersEmail: {
     type: 'text',
-    label: 'Email address Nova points job-seekers to',
-    default: 'careers@northwindcreative.sg',
+    // Default deliberately NOT an email literal: an email-shaped param default gets tokenized
+    // by Volty, and push then fails on every future push with "no longer has on record" since
+    // that token can't resolve to a real contact. Found live, blocked all pushes until fixed —
+    // see docs/BUGS.md. Set the real address with `params set-value` after push, not here.
+    label: 'Email address Nova points job-seekers to (set live via params set-value, not here)',
+    default: 'not yet set — ask an admin to set careersEmail',
   },
   slaMinutes: {
     type: 'number',

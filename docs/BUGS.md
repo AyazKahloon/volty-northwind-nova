@@ -47,6 +47,18 @@ Each entry: what broke, how it was caught, the fix. All found via live testing (
 **Cause:** a topic match in `inbox.ts`'s `handoff.topics` is a platform-level interception, not something the agent's own instructions can see or route around.
 **Fix:** removed all native `handoff.topics`. Every escalation trigger (budget, explicit request, anger, legal) now goes through Nova's own judgment + the `leads` row + the automation — one path, no platform shortcut bypassing it. The lost safety net (auto draft-mode, SLA queue) is replaced by `stepBackMinutes` + the custom `hand-off-sla-safety-net` automation.
 
+## 11. `volty push`/`pull` permanently blocked — "email address Volty no longer has on record"
+**Caught:** `volty push --dry-run` started failing with `project push: This holds an email address that Volty no longer has on record (it was forgotten, or it is not from this workspace)...` after a batch of test runs. `volty pull` failed with the identical message.
+**Diagnosis (extensive — ruled out in this order):** not my uncommitted files (reproduced with `git stash -u`, a byte-identical re-push of the last known-good commit); not the `careersEmail` param (reproduced after changing both its declared default in `params.ts` and its live value via `params set-value`); not contacts (reproduced after `debug sandbox-cleanup --all` removed all 13 synthetic contacts); not table rows (reproduced after clearing every `pii:` email token found across `leads`, including ones left orphaned by the contact cleanup); not companies or org members (both empty/clean).
+**What does work:** single-target live ops — `instructions update`, `automations update-source`, `params set-value`, `rows.*`, `tables.*` — all continued to succeed throughout. Only the full-workspace-reconciliation path (`push`/`pull`, which diffs instructions+params+automations+tables+project files together) is affected.
+**Root cause:** not identified — likely a stale/unresolvable PII reference somewhere in a part of the full-sync scan not reachable through any read op tried (widget/channel internals, an audit/history log, or similar). Not fixed.
+**Workaround adopted:** deploy all further changes through the single-target live ops directly (`instructions update` for `org.md`-equivalent changes, `automations update-source` for automation code, `params set-value` for params) instead of `volty push`. This means the local project folder will drift from the live workspace state until push/pull work again — noted here so a future session doesn't trust a stale local pull.
+
+## 10a. Test harness: fixed-wait race condition (test-infrastructure bug, not a Nova bug)
+**Caught:** the first full 12-scenario batch reported 4 false failures (`status=undefined`, `labels=[]`) for scenarios that, on manual re-run in isolation, scored correctly.
+**Cause:** `tests/run-scenarios.ts` waited a fixed 6s before grading end state. That was enough in isolation but not once several scenarios' automation triggers queued up back-to-back in a full batch.
+**Fix:** poll for `row.status` (ceiling 20s) instead of a fixed sleep. All 5 previously-"failing" scenarios passed cleanly once re-run with the fix — confirming the earlier failures were the harness, not the product.
+
 ## 10. Nova calls the native hand-off tool on her own initiative — non-deterministically
 **Caught:** `test-human-1` (before the prohibition was added) and `test-sla-1` (**after** the prohibition was added and pushed) — same input, different behavior across two separate conversations.
 **Cause:** `conversations.handToTeam` is available to Nova as a tool regardless of `handoff.topics`; an instruction not to use it was followed on one run and silently ignored on another.
