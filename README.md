@@ -67,6 +67,15 @@ bun run tests/run-scenarios.ts          # end-state scenarios against the live a
 
 The integration suite grades from the **final state** of the `leads` row and Contact Labels, not reply wording — see `docs/PLAN.md` for the full methodology (simulated personas, negative tests, pass³ reporting, LLM judges).
 
+## Demo settings (not production values)
+
+For the review period, two SLA-related values are tightened so a reviewer doesn't have to wait on a real escalation:
+
+- `slaMinutes` param is **3** (production value: **15**) — how long an escalated conversation can wait with no staff reply before the holding message + re-notify fires.
+- `hand-off-sla-safety-net`'s schedule is **every 5 minutes** (production value: **every 10 minutes**) — how often the safety net checks for a breach.
+
+Revert both (`params set-value --name=slaMinutes --value=15` and the cron in `automations/hand-off-sla-safety-net.ts` back to `*/10 * * * *`, redeployed via `automations update-source`) before any real deployment.
+
 ## A known platform bug, and how this repo works around it
 
 `volty push`/`volty pull` are currently blocked workspace-wide by an unresolved Volty platform bug — full report in [`docs/VOLTY_BUG_REPORT.md`](docs/VOLTY_BUG_REPORT.md), tracked in [`docs/BUGS.md`](docs/BUGS.md) (#11). Every change since is deployed through individual live ops (`instructions update`, `automations update-source`, `params set-value`) instead of `push`. To keep this repo matching the live workspace without a working `pull`, `scripts/snapshot-live.ts` reads live state back via those same single-target read ops into `snapshot/` — run before every commit.

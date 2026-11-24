@@ -102,13 +102,13 @@
       "sensitivity": "private",
       "options": null,
       "default": 15,
-      "value": 15,
+      "value": 3,
       "isDefault": false,
       "setBy": {
         "userId": "svueosu4am5cr7w",
         "name": "Mohammad Ayaz"
       },
-      "setAt": "2026-11-24T11:20:34.964Z"
+      "setAt": "2026-11-24T15:37:41.477Z"
     }
   ]
 }

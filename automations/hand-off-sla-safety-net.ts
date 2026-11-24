@@ -9,7 +9,9 @@ const MAX_PAGES = 2
 
 export default defineAutomation({
   id: 'hand-off-sla-safety-net',
-  trigger: { kind: 'schedule', cron: '*/10 * * * *' },
+  // DEMO SETTING: every 5 min (production value: */10) to match slaMinutes=3 for the review
+  // period — see README.md "Demo settings". Revert both before any real deployment.
+  trigger: { kind: 'schedule', cron: '*/5 * * * *' },
   input: z.object({ intendedRunAt: z.string().optional() }),
   output: z.object({ held: z.number(), skipped: z.number() }),
   async run({ input, ctx }) {
