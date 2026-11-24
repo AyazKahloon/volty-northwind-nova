@@ -8,7 +8,9 @@ Today is **Tuesday 24 Nov 2026**. Deadline: Thursday 26 Nov, 4pm Singapore (1pm 
 
 **v3** adds the full A–E priority list (deterministic scoring, progressive state, intent classification, knowledge gaps, SME behavior tuning, verification, the 3x-run test suite, polish) — see §12 for what was built and the live bugs found along the way.
 
-**v4** adds Part 1 (credit protection, binding on all testing from here on) and Part 2 (research-based upgrades: evals methodology, speed-to-lead metrics, PDPA compliance, conversation-flow ordering, business hours, outcome tracking) — see §13 and §14.
+**v4** adds Part 1 (credit protection, binding on all testing from here on) and Part 3 (research-based upgrades: evals methodology, speed-to-lead metrics, PDPA compliance, conversation-flow ordering, business hours, outcome tracking) — see §13 and §15.
+
+**v5** adds Part 2 — GitHub publishing (§14): account verification before any auth action, `.gitignore`/secret-scan gate before the first push, public repo creation, README with the harness architecture, and `snapshot-live.ts` run before every commit to keep the repo matching live state while `push`/`pull` stay broken.
 
 ---
 
@@ -317,7 +319,7 @@ Total ≈ 17.5h, Tue–Wed.
 
 - **Baseline (checked 2026-11-24):** 180/5,000 credits used this cycle (3.6%), ~13 credits/Nova-reply average. Cycle resets 2026-12-01 (coincides with trial end).
 - **Hard floor: never let remaining credits drop below 2,500.** Before any test batch, estimate its cost (turns × ~13-15 credits) and state it; if the estimate would cross the floor, stop and ask first.
-- **Only Nova's replies spend Volty credits.** The simulated-user personas (§14.A) and every LLM judge run through Claude Code, never through Volty — they read/reason over transcripts already captured via `debug trace`, they don't call Volty themselves.
+- **Only Nova's replies spend Volty credits.** The simulated-user personas (§15.A) and every LLM judge run through Claude Code, never through Volty — they read/reason over transcripts already captured via `debug trace`, they don't call Volty themselves.
 - **Dev-loop discipline:** rerun only failing scenarios (once), not the whole suite, while iterating. The full suite × 3 runs happens exactly once, at the end, for the final numbers.
 - **Effort comparison (low vs. medium) is 5 representative scenarios only**, not the full suite.
 - **`debug sandbox-cleanup` after every batch** (scoped to that batch's own synthetic contacts, never `--all`).
@@ -325,7 +327,24 @@ Total ≈ 17.5h, Tue–Wed.
 
 ---
 
-## 14. PART 2 — Research-based upgrades, mapped into A–E
+## 14. PART 2 — GitHub publishing
+
+Git is already initialized locally (§ earlier session) with commits up through the push/pull-bug workaround. No remote exists yet — this section adds one, under the user's explicit control throughout (no GitHub auth/account action taken without asking first, per standing instruction).
+
+**Steps, in order:**
+1. **Account check first.** `gh auth status` — confirm it's logged in as the account linked to `ayazkahloon26@gmail.com`. If it's a different account, or not logged in at all, **stop and tell the user** (they run `gh auth login` themselves) rather than attempting any auth action.
+2. **Local git identity.** `git config user.email "ayazkahloon26@gmail.com"` and `git config user.name "Muhammad Ayaz"` — local to this repo, not global.
+3. **`.gitignore` audit.** Confirm it excludes: `.env*`, any `volty` auth/token/credential files, `.vercel/`, `node_modules/`, logs, OS cruft (`.DS_Store`, `Thumbs.db`), and the research-dump/scratch files from Phase 1 exploration (already kept out of the project folder itself, per the original Phase-1 cleanup — verify nothing like `llms_full.txt`/`volty_help.txt`/`ops_grep.txt` ever got committed).
+4. **Secret scan — tracked files AND full commit history**, before any push: every file currently tracked, plus `git log -p` (or equivalent) across every commit so far, checked for API keys/tokens, Volty credentials, any personal email/phone other than `ayazkahloon26@gmail.com`, and anything resembling real customer data (everything in this project is meant to be fictional/synthetic — `services`/`faqs`/`case_studies` seed content and test scenario data, never a real client). **Report the file list and anything suspicious; do not push until the user confirms.** If anything turns up already committed into history (not just the working tree), the clean-up options to present are: `git filter-repo` (preferred — rewrites history, requires a fresh clone or force-push) or, for a repo this young, simply resetting to an empty history and recommitting current state (simpler, loses commit-by-commit history, viable here since nothing externally depends on the existing commit SHAs yet).
+5. **Repo creation.** Once confirmed clean: `gh repo create volty-northwind-nova --public` under the confirmed account, then push `main`.
+6. **`README.md`** (written before the push in step 5, so it's part of the initial public history): what Nova is, the harness architecture as a Mermaid diagram (chat → Nova extracts fields → `leads` row → automation scores + labels + notifies → human/automation follow-through), the folder structure, how to run the tests (`bun test`, `bun run tests/run-scenarios.ts`), links to the landing page and the case study (placeholders until those exist), the key design decision stated plainly ("the LLM extracts, code decides" — §12/A1's deterministic-scoring tradeoff), and a note on the `volty push`/`pull` bug with the `snapshot-live.ts` workaround (linking `docs/BUGS.md` and `docs/VOLTY_BUG_REPORT.md`).
+7. **Ongoing discipline:** run `scripts/snapshot-live.ts` before every commit from here on (so the public repo always reflects live workspace state, given push/pull are down), commit and push after each finished section, not in one giant batch at the end.
+
+**Deliverable:** the repo URL, handed back once pushed.
+
+---
+
+## 15. PART 3 — Research-based upgrades, mapped into A–E
 
 **A. Evals (fits into §8/D — test suite methodology, replacing the plain 3x-repeat design)**
 - Simulated-user tests: an LLM persona (run via Claude Code, not Volty) drives up to 8 turns against the real widget channel via `wake-sync`, for up to 5 personas (impatient Singlish-speaking Tampines cafe owner with unclear budget; clinic owner burned by a previous agency; a 15k/mo enterprise lead; a job seeker; an SEO vendor-spam pitch). The scripted single/multi-turn scenarios from §8 stay — personas are additive coverage, not a replacement.
@@ -361,12 +380,12 @@ Total ≈ 17.5h, Tue–Wed.
 | Area | Est. |
 |---|---|
 | Part 1 (credit-protocol discipline — mostly process, a small results.md addition) | 0.5h |
-| Part 2.A (simulated personas, end-state grading, pass^3, negative tests, judges+Unknown, 10 saved transcripts, turn cap) — supersedes the plain-repeat test runner | 3h |
-| Part 2.B (speed-to-lead metrics) | 0.5h |
-| Part 2.C (PDPA: purpose line, privacy line, do_not_contact flow, opt-out line, landing-page info card) | 1.5h |
-| Part 2.D (flow reorder, quick-paths buttons, recap-and-confirm) | 1.5h |
-| Part 2.E (business hours param + after-hours behavior across instructions/handover/SLA) | 1h |
-| Part 2.F (outcome/not_fit_reason columns) | 0.25h |
+| Part 3.A (simulated personas, end-state grading, pass^3, negative tests, judges+Unknown, 10 saved transcripts, turn cap) — supersedes the plain-repeat test runner | 3h |
+| Part 3.B (speed-to-lead metrics) | 0.5h |
+| Part 3.C (PDPA: purpose line, privacy line, do_not_contact flow, opt-out line, landing-page info card) | 1.5h |
+| Part 3.D (flow reorder, quick-paths buttons, recap-and-confirm) | 1.5h |
+| Part 3.E (business hours param + after-hours behavior across instructions/handover/SLA) | 1h |
+| Part 3.F (outcome/not_fit_reason columns) | 0.25h |
 | **Total additional** | **~8.25h** |
 
 This lands on top of the A-E core work already underway (deterministic scoring/intent/knowledge-gaps done; verification done; the plain test suite and polish still ahead). Given the Wednesday-night deadline, recommend following your stated priority order (Part 1 always-on; then A2-A4 of Part 2 — end-state grading, pass^3, negative tests; then C, D, B; E and F last) and treating anything past that as a documented "with more time" item in the case study rather than skipped silently.
