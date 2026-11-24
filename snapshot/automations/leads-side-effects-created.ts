@@ -132,6 +132,29 @@ export default defineAutomation({
       notified = true
     }
 
+    // Booking link without lag (first hot transition only — booking_link_sent_at is a dedicated,
+    // permanent guard independent of last_notified_status, so this never re-fires for a row that
+    // cools and re-heats or gets reprocessed). Name can be prefilled because it's stored as plain
+    // text; email can't — ctx.volty.* resolves a PII token only when passed to a dedicated
+    // PII-aware sink (e.g. messaging.compose's `to`), not when interpolated into ordinary text,
+    // so an automation can never put the real address into a URL string. Nova, who sees the
+    // plaintext live in conversation, can still quote the email-prefilled link herself on request.
+    let bookingLinkSent = false
+    const conversationId = typeof row.fields.conversation_id === 'string' ? row.fields.conversation_id : ''
+    const bookingUrlBase = typeof ctx.params.bookingUrl === 'string' ? ctx.params.bookingUrl : ''
+    if (status === 'hot' && !row.fields.booking_link_sent_at && conversationId && bookingUrlBase) {
+      const name = typeof row.fields.name === 'string' ? row.fields.name : null
+      const service = typeof row.fields.service_needed === 'string' ? row.fields.service_needed : 'your project'
+      const budgetField = row.fields.monthly_budget_sgd
+      const budgetText = typeof budgetField === 'number' ? `SGD ${budgetField}/mo` : 'your budget'
+      const bookingLink = name ? `${bookingUrlBase}?name=${encodeURIComponent(name)}` : bookingUrlBase
+      await ctx.volty.messaging.send({
+        conversationId,
+        content: `Great — ${service} at ${budgetText} sounds like a strong fit. Here's a link to book a discovery call with our team: ${bookingLink}`,
+      })
+      bookingLinkSent = true
+    }
+
     await ctx.volty.rows.update({
       tableId: input.tableId,
       rows: [
@@ -142,6 +165,7 @@ export default defineAutomation({
             side_effects_at: await ctx.now(),
             last_processed_status: processedKey,
             ...(notified ? { last_notified_status: processedKey } : {}),
+            ...(bookingLinkSent ? { booking_link_sent_at: await ctx.now() } : {}),
           },
         },
       ],

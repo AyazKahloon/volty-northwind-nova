@@ -15,3 +15,10 @@ Credits spent this batch: 14
 Credits per conversation: 2.8
 Avg time to first reply: 23.6s
 Avg time from status=hot/escalated to staff notification: 17.5s (industry B2B average lead response: ~42 hours = 151200s)
+
+## Fix-list verification runs (2026-11-24, ad hoc, not part of the 1x suite above)
+
+| Item | Scenario | Result | Cost |
+|---|---|---|---|
+| 1 — handoff convergence | Forced `conversation.assigned` via `conversations reassign-user` on a real test conversation | Row escalated, correct quote, label + staff.notify applied via the existing `leads-side-effects-updated` handler | n/a (no LLM turn) |
+| 2 — booking link without lag | `hot-single-message`-style turn (Meta Ads, SGD 5,000/mo, this week, decision maker, name + email, all in one message) | Automation sent recap + `?name=`-prefilled booking link in the same run that first computed `hot`; `booking_link_sent_at` stamped; Nova's next-turn reply correctly did not resend the link | $0.0075, 2 turns |

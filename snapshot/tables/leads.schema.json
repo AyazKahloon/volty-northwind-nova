@@ -236,9 +236,19 @@
       "type": "text",
       "config": {},
       "required": false
+    },
+    {
+      "id": "ibmtxcbm4djxqtc",
+      "key": "booking_link_sent_at",
+      "label": "Booking link sent at (by automation)",
+      "type": "date",
+      "config": {
+        "granularity": "datetime"
+      },
+      "required": false
     }
   ],
-  "rowCount": 60,
+  "rowCount": 61,
   "sharing": {
     "mode": "open",
     "level": "manage",
