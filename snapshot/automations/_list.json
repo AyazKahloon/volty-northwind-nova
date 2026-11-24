@@ -1,6 +1,43 @@
 {
   "automations": [
     {
+      "id": "77l80pu4kli4",
+      "name": "handoff-convergence",
+      "slug": "handoff-convergence",
+      "origin": "tenant_authored",
+      "triggerKind": "event",
+      "triggerName": "conversation.assigned",
+      "paused": false,
+      "deployed": true,
+      "riskClass": [
+        "S"
+      ],
+      "pendingApproval": false,
+      "lastRun": {
+        "status": "succeeded",
+        "createdAt": "2026-11-24T15:20:38.665Z"
+      },
+      "owner": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "nextRunAt": null,
+      "lastFiling": {
+        "at": "2026-11-24T15:20:26.154Z",
+        "requestedBy": {
+          "userId": "svueosu4am5cr7w",
+          "name": "Mohammad Ayaz"
+        }
+      },
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "needsYou": false,
+      "disconnectedChannelIds": [],
+      "pausedFor": null
+    },
+    {
       "id": "maky4640fdji",
       "name": "daily-qa-scan",
       "slug": "daily-qa-scan",
@@ -52,13 +89,13 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T15:02:21.489Z"
+        "createdAt": "2026-11-24T15:12:23.444Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",
         "name": "Mohammad Ayaz"
       },
-      "nextRunAt": "2026-11-24T15:10:00.000Z",
+      "nextRunAt": "2026-11-24T15:30:00.000Z",
       "lastFiling": {
         "at": "2026-11-24T11:18:56.311Z",
         "requestedBy": {
@@ -89,7 +126,7 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T14:39:19.097Z"
+        "createdAt": "2026-11-24T15:20:40.549Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",
@@ -126,7 +163,7 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T14:36:51.771Z"
+        "createdAt": "2026-11-24T15:18:05.649Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",
