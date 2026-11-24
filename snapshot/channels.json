@@ -1,0 +1,17 @@
+{
+  "channels": [
+    {
+      "id": "jm3dx6apti0e",
+      "channel": "web",
+      "role": "contact",
+      "displayName": "Northwind Creative Web Chat",
+      "whatsappDisplayName": null,
+      "address": null,
+      "label": null,
+      "status": "active",
+      "health": null,
+      "inboxId": "1ncdj2ytemqq"
+    }
+  ],
+  "total": 1
+}

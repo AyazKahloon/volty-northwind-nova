@@ -1,0 +1,297 @@
+{
+  "widget": {
+    "id": "rws0x4hawz8v",
+    "name": "Northwind Creative Web Chat",
+    "publishableId": "0oc6vohhha1yscspq6ghl",
+    "target": "web_chat",
+    "channelInstanceId": "jm3dx6apti0e",
+    "channelInstanceName": "Northwind Creative Web Chat",
+    "allowedDomains": [
+      "landing-page-one-eta-54.vercel.app"
+    ],
+    "font": "inter",
+    "logo": "workspace",
+    "handoffWhatsappInstanceId": null,
+    "handoffEmailInstanceId": null,
+    "requireEmailCode": false,
+    "verifyPhone": false,
+    "verifyEmail": false,
+    "handoffWhatsapp": true,
+    "handoffEmail": true,
+    "askTiming": "after",
+    "startName": "off",
+    "startEmail": "off",
+    "startPhone": "off",
+    "startFields": [],
+    "showBranding": true,
+    "googleAnalytics": false,
+    "showQr": true,
+    "googleTag": null,
+    "seen": null,
+    "pausedAt": null,
+    "cardTitle": "Northwind Creative",
+    "launcherLabel": "Let's chat",
+    "icon": "chat",
+    "greeting": "Hi there 👋 How can we help?",
+    "prefillBody": "Hi, I saw {page} on your website and would like to know more.",
+    "prefillFallback": "Hi, I saw your website and would like to know more.",
+    "primaryColor": "#2563eb",
+    "position": "bottom-right",
+    "defaultCountry": "SG",
+    "createdAt": "2026-11-24T10:21:45.359Z"
+  },
+  "settings": [
+    {
+      "key": "name",
+      "label": "Name",
+      "value": "Northwind Creative Web Chat"
+    },
+    {
+      "key": "channelInstanceId",
+      "label": "Channel",
+      "value": "Web chat: Northwind Creative Web Chat (jm3dx6apti0e), fixed: a chat site widget stays on its channel"
+    },
+    {
+      "key": "cardTitle",
+      "label": "Title",
+      "value": "Northwind Creative"
+    },
+    {
+      "key": "launcherLabel",
+      "label": "Launcher label",
+      "value": "“Let's chat”"
+    },
+    {
+      "key": "icon",
+      "label": "Launcher icon",
+      "value": "chat"
+    },
+    {
+      "key": "greeting",
+      "label": "Greeting",
+      "value": "not used: a chat has no greeting"
+    },
+    {
+      "key": "prefillBody",
+      "label": "Prefilled WhatsApp message",
+      "value": "not used: a chat opens the chat panel, not a WhatsApp message"
+    },
+    {
+      "key": "prefillFallback",
+      "label": "Prefilled message on a page with no title",
+      "value": "not used: a chat opens the chat panel, not a WhatsApp message"
+    },
+    {
+      "key": "primaryColor",
+      "label": "Colour",
+      "value": "#2563eb"
+    },
+    {
+      "key": "position",
+      "label": "Position on the page",
+      "value": "bottom-right"
+    },
+    {
+      "key": "defaultCountry",
+      "label": "Default phone country",
+      "value": "SG, where the phone number field starts when the visitor’s country is not known"
+    },
+    {
+      "key": "allowedDomains",
+      "label": "Websites that may show the chat",
+      "value": "landing-page-one-eta-54.vercel.app"
+    },
+    {
+      "key": "font",
+      "label": "Font",
+      "value": "inter"
+    },
+    {
+      "key": "showBranding",
+      "label": "“Powered by Volty” footer",
+      "value": "shown"
+    },
+    {
+      "key": "googleAnalytics",
+      "label": "Send chat events to Google Analytics",
+      "value": "off"
+    },
+    {
+      "key": "showQr",
+      "label": "QR code on a computer",
+      "value": "not used: a chat has no WhatsApp card"
+    },
+    {
+      "key": "logo",
+      "label": "Header picture",
+      "value": "none, so the header shows the workspace’s logo, or the animated Volty mark where the workspace has none"
+    },
+    {
+      "key": "handoffWhatsappInstanceId",
+      "label": "WhatsApp number",
+      "value": "none picked"
+    },
+    {
+      "key": "handoffEmailInstanceId",
+      "label": "Email channel",
+      "value": "none picked"
+    },
+    {
+      "key": "requireEmailCode",
+      "label": "Ask for a code emailed to the address before the chat continues by email",
+      "value": "off"
+    },
+    {
+      "key": "verifyPhone",
+      "label": "Send an OTP on WhatsApp",
+      "value": "off"
+    },
+    {
+      "key": "verifyEmail",
+      "label": "Send an OTP by email",
+      "value": "off"
+    },
+    {
+      "key": "handoffWhatsapp",
+      "label": "Visitors can continue the chat on WhatsApp",
+      "value": "on, but not offered because no WhatsApp number is picked"
+    },
+    {
+      "key": "handoffEmail",
+      "label": "Visitors can continue the chat by email",
+      "value": "on, but not offered because no email channel is picked"
+    },
+    {
+      "key": "askTiming",
+      "label": "When to ask for the visitor’s details",
+      "value": "after the answer: nothing is asked before Volty answers, and the start rows are not shown"
+    },
+    {
+      "key": "headline",
+      "label": "The Opening’s headline, its first line / its second",
+      "value": "“(the greeting for the visitor’s time of day) / What can we help your business with?”, written by Volty from the website"
+    },
+    {
+      "key": "openingStyle",
+      "label": "The Opening’s style",
+      "value": "aurora, and night on a dark website, as the website read applied it"
+    },
+    {
+      "key": "heroImage",
+      "label": "The Photo style’s picture",
+      "value": "none"
+    },
+    {
+      "key": "lookMatched",
+      "label": "The look follows the website (Match my website)",
+      "value": "on: each read of the website applies the style, colour, font, logo and photo it finds"
+    },
+    {
+      "key": "startName",
+      "label": "Ask for the visitor’s name at the start",
+      "value": "off"
+    },
+    {
+      "key": "startEmail",
+      "label": "Ask for the visitor’s email at the start (typed, never confirmed)",
+      "value": "off"
+    },
+    {
+      "key": "startPhone",
+      "label": "Ask for the visitor’s phone at the start (typed, never confirmed)",
+      "value": "off"
+    },
+    {
+      "key": "startFields",
+      "label": "The start form, in order (a question of your own is kept on the contact field its label names)",
+      "value": ""
+    }
+  ],
+  "embedSnippet": "<script async src=\"https://volty.voltade.com/widget/v1.js\" data-widget-id=\"0oc6vohhha1yscspq6ghl\"></script>",
+  "lastStarted": null,
+  "chatPageUrl": "https://volty.voltade.com/chat/0oc6vohhha1yscspq6ghl",
+  "opening": {
+    "shortcuts": [
+      {
+        "id": "jlkypkgnm",
+        "url": null,
+        "asks": "How can you help with Meta Ads?",
+        "label": "Meta Ads",
+        "pages": null,
+        "action": "send",
+        "author": "volty",
+        "pinned": true,
+        "taps": 0,
+        "showing": true
+      },
+      {
+        "id": "lblf9yryr",
+        "url": null,
+        "asks": "How can you help with Google Ads?",
+        "label": "Google Ads",
+        "pages": null,
+        "action": "send",
+        "author": "volty",
+        "pinned": true,
+        "taps": 0,
+        "showing": true
+      },
+      {
+        "id": "2bsnu22ik",
+        "url": null,
+        "asks": "What does your social media management include?",
+        "label": "Social media",
+        "pages": null,
+        "action": "send",
+        "author": "volty",
+        "pinned": true,
+        "taps": 0,
+        "showing": true
+      },
+      {
+        "id": "hsdh061x3",
+        "url": null,
+        "asks": "What does your website design service include?",
+        "label": "Website design",
+        "pages": null,
+        "action": "send",
+        "author": "volty",
+        "pinned": false,
+        "taps": 0,
+        "showing": false
+      },
+      {
+        "id": "zet4edjsl",
+        "url": null,
+        "asks": "What information do you need to recommend the right service for my business?",
+        "label": "Get started",
+        "pages": null,
+        "action": "send",
+        "author": "volty",
+        "pinned": false,
+        "taps": 0,
+        "showing": false
+      }
+    ],
+    "quickPaths": null,
+    "suggestions": [],
+    "taps": {}
+  },
+  "platformPausedAt": null,
+  "siteRead": {
+    "site": "https://landing-page-one-eta-54.vercel.app/",
+    "at": "2026-11-24T10:21:52.945Z",
+    "reading": false,
+    "error": null,
+    "failingSince": null,
+    "runsLeft": 5,
+    "snippet": false,
+    "found": {
+      "color": "#2563eb",
+      "font": null,
+      "style": "aurora",
+      "logo": false,
+      "photo": false
+    }
+  }
+}

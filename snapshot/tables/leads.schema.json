@@ -1,0 +1,219 @@
+{
+  "table": {
+    "id": "s1e46y1j2hx0",
+    "name": "leads",
+    "description": "Lead qualification records written live by Nova (one row per contact, updated not duplicated). A row-change automation applies the Contact Label and staff notification based on status.",
+    "icon": null,
+    "agentLanes": [
+      "staff",
+      "customer"
+    ],
+    "agentWriteLanes": [
+      "staff",
+      "customer"
+    ],
+    "customerOwner": {
+      "kind": "contact",
+      "column": "contact_id"
+    }
+  },
+  "columns": [
+    {
+      "id": "ft9wobom28gqf0k",
+      "key": "name",
+      "label": "Name",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "854qbrwchsmfzcx",
+      "key": "contact_id",
+      "label": "Contact ID",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "r77gkjywefve8c6",
+      "key": "email",
+      "label": "Email",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "vf628ev8fz10p7z",
+      "key": "service_needed",
+      "label": "Service needed",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "kdd1hjqyv3o8rcd",
+      "key": "business_type",
+      "label": "Business type",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "ibjlqkh7humlfqr",
+      "key": "website",
+      "label": "Website",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "3sua980ximgtpjx",
+      "key": "monthly_budget_sgd",
+      "label": "Monthly budget (SGD)",
+      "type": "number",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "wygdynt5q16jfpv",
+      "key": "timeline",
+      "label": "Timeline",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "sqloi11qs6k8877",
+      "key": "decision_maker",
+      "label": "Decision maker",
+      "type": "enum",
+      "config": {
+        "options": [
+          "yes",
+          "no",
+          "unsure"
+        ]
+      },
+      "required": false
+    },
+    {
+      "id": "x3z8ox5ac1irdkn",
+      "key": "status",
+      "label": "Status",
+      "type": "enum",
+      "config": {
+        "options": [
+          "hot",
+          "warm",
+          "not-fit",
+          "escalated",
+          "referred",
+          "spam"
+        ]
+      },
+      "required": false
+    },
+    {
+      "id": "942ewmxqowb6l9q",
+      "key": "qualification_summary",
+      "label": "Qualification summary / handover note",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "ghdans99j38cfoo",
+      "key": "last_followup_at",
+      "label": "Last follow-up sent at",
+      "type": "date",
+      "config": {
+        "granularity": "datetime"
+      },
+      "required": false
+    },
+    {
+      "id": "9l6drsk6h93y38o",
+      "key": "side_effects_at",
+      "label": "Side effects applied at",
+      "type": "date",
+      "config": {
+        "granularity": "datetime"
+      },
+      "required": false
+    },
+    {
+      "id": "bhudp4en0a471ir",
+      "key": "last_notified_status",
+      "label": "Last status staff.notify fired for",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "88qto247lxnihcp",
+      "key": "last_processed_status",
+      "label": "Last status this automation fully processed (loop guard)",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "2s2oxrkvhbobviz",
+      "key": "intent",
+      "label": "Intent classification",
+      "type": "enum",
+      "config": {
+        "options": [
+          "new_lead",
+          "existing_client",
+          "job_seeker",
+          "vendor_spam",
+          "other"
+        ]
+      },
+      "required": false
+    },
+    {
+      "id": "lw4v7pdzb2ryx1y",
+      "key": "timeline_days",
+      "label": "Timeline (days, extracted)",
+      "type": "number",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "ekp3ognwh1ue3k0",
+      "key": "missing_fields",
+      "label": "Fields still needed (comma-separated)",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "7ki3nllit8eqwjm",
+      "key": "conversation_id",
+      "label": "Conversation ID (for SLA/hand-off tracking)",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "0wrihcmwmo5qqn8",
+      "key": "sla_holding_sent_at",
+      "label": "Holding message sent at (SLA safety net)",
+      "type": "date",
+      "config": {
+        "granularity": "datetime"
+      },
+      "required": false
+    }
+  ],
+  "rowCount": 30,
+  "sharing": {
+    "mode": "open",
+    "level": "manage",
+    "canShare": true,
+    "grants": [],
+    "rowRule": null
+  }
+}

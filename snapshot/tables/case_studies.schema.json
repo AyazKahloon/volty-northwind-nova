@@ -1,0 +1,58 @@
+{
+  "table": {
+    "id": "296blf6i15lc",
+    "name": "case_studies",
+    "description": "Fictional/anonymized composite case studies illustrating typical outcomes. Read by Nova when a lead asks about past results — never presented as a guarantee.",
+    "icon": null,
+    "agentLanes": [
+      "staff",
+      "customer"
+    ],
+    "agentWriteLanes": [
+      "staff"
+    ],
+    "customerOwner": null
+  },
+  "columns": [
+    {
+      "id": "tzij25y1rj0rqfq",
+      "key": "client_name",
+      "label": "Client (anonymized)",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "vbr44mxqf96weg9",
+      "key": "service",
+      "label": "Service",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "aau0h4wocd3vhlz",
+      "key": "summary",
+      "label": "Summary",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "toi7ebt87fhrg7m",
+      "key": "result_range",
+      "label": "Illustrative result (hedged, never a guarantee)",
+      "type": "text",
+      "config": {},
+      "required": true
+    }
+  ],
+  "rowCount": 4,
+  "sharing": {
+    "mode": "open",
+    "level": "manage",
+    "canShare": true,
+    "grants": [],
+    "rowRule": null
+  }
+}

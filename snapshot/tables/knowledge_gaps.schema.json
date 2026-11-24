@@ -1,0 +1,67 @@
+{
+  "table": {
+    "id": "ofu2lr7rtyqb",
+    "name": "knowledge_gaps",
+    "description": "Questions Nova could not answer from services/faqs/case_studies, logged for a human to fill in. Never used to answer PSG/EDG grant-eligibility questions - those are always logged here, never assessed.",
+    "icon": null,
+    "agentLanes": [
+      "staff",
+      "customer"
+    ],
+    "agentWriteLanes": [
+      "staff",
+      "customer"
+    ],
+    "customerOwner": {
+      "kind": "contact",
+      "column": "contact_id"
+    }
+  },
+  "columns": [
+    {
+      "id": "fyn8lxodow35n25",
+      "key": "question",
+      "label": "Question",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "ut19my39481j1vv",
+      "key": "contact_id",
+      "label": "Contact ID",
+      "type": "text",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "mff4kxdk3hwiso6",
+      "key": "status",
+      "label": "Status",
+      "type": "enum",
+      "config": {
+        "options": [
+          "open",
+          "answered"
+        ]
+      },
+      "required": true
+    },
+    {
+      "id": "ja4ks7suw8iue0j",
+      "key": "answer",
+      "label": "Answer",
+      "type": "text",
+      "config": {},
+      "required": false
+    }
+  ],
+  "rowCount": 1,
+  "sharing": {
+    "mode": "open",
+    "level": "manage",
+    "canShare": true,
+    "grants": [],
+    "rowRule": null
+  }
+}

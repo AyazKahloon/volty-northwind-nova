@@ -1,0 +1,114 @@
+{
+  "params": [
+    {
+      "inbox": null,
+      "name": "hotBudget",
+      "type": "number",
+      "label": "Hot lead budget threshold (SGD/mo)",
+      "help": null,
+      "sensitivity": "private",
+      "options": null,
+      "default": 3000,
+      "value": 3000,
+      "isDefault": true,
+      "setBy": null,
+      "setAt": null
+    },
+    {
+      "inbox": null,
+      "name": "escalateBudget",
+      "type": "number",
+      "label": "Escalate-to-human budget threshold (SGD/mo)",
+      "help": null,
+      "sensitivity": "private",
+      "options": null,
+      "default": 10000,
+      "value": 10000,
+      "isDefault": true,
+      "setBy": null,
+      "setAt": null
+    },
+    {
+      "inbox": null,
+      "name": "followupDays",
+      "type": "number",
+      "label": "Days of silence before a warm lead gets an email nudge",
+      "help": null,
+      "sensitivity": "private",
+      "options": null,
+      "default": 3,
+      "value": 3,
+      "isDefault": false,
+      "setBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "setAt": "2026-11-24T11:06:18.817Z"
+    },
+    {
+      "inbox": null,
+      "name": "brandName",
+      "type": "text",
+      "label": "Brand name Nova uses in conversation",
+      "help": null,
+      "sensitivity": "private",
+      "options": null,
+      "default": "Northwind Creative",
+      "value": "Northwind Creative",
+      "isDefault": true,
+      "setBy": null,
+      "setAt": null
+    },
+    {
+      "inbox": null,
+      "name": "bookingUrl",
+      "type": "text",
+      "label": "Discovery-call booking link (e.g. Calendly) sent to hot leads",
+      "help": null,
+      "sensitivity": "private",
+      "options": null,
+      "default": "PLACEHOLDER_NEEDS_REAL_CALENDLY_LINK",
+      "value": "https://calendly.com/ayazkahloon26/discovery-call",
+      "isDefault": false,
+      "setBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "setAt": "2026-11-24T10:14:10.274Z"
+    },
+    {
+      "inbox": null,
+      "name": "careersEmail",
+      "type": "text",
+      "label": "Email address Nova points job-seekers to",
+      "help": null,
+      "sensitivity": "private",
+      "options": null,
+      "default": "pii:em4xvtnxfu883zohsc",
+      "value": "ask the team directly",
+      "isDefault": false,
+      "setBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "setAt": "2026-11-24T11:48:41.628Z"
+    },
+    {
+      "inbox": null,
+      "name": "slaMinutes",
+      "type": "number",
+      "label": "Minutes an escalated lead may wait with no staff reply before a holding message + re-notify fires",
+      "help": null,
+      "sensitivity": "private",
+      "options": null,
+      "default": 15,
+      "value": 15,
+      "isDefault": false,
+      "setBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "setAt": "2026-11-24T11:20:34.964Z"
+    }
+  ]
+}

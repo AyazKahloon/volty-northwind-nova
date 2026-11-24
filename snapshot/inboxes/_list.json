@@ -1,0 +1,53 @@
+{
+  "inboxes": [
+    {
+      "id": "x2znw1az3vv4",
+      "name": "Sandbox",
+      "type": "shared",
+      "role": "inbox_admin",
+      "voltyReplyMode": "live",
+      "voltyModeChosen": true,
+      "voltyReplyModeSchedule": null,
+      "voltyLiveForNewContacts": false,
+      "voltyNewContactWindowDays": null,
+      "voltyStepBackMinutes": 30,
+      "voltyIsDefaultResponder": true,
+      "idleCloseAfterMinutes": 1440,
+      "idleCloseOwned": false,
+      "hasLiveChannel": true
+    },
+    {
+      "id": "1ncdj2ytemqq",
+      "name": "Northwind Creative Web Chat",
+      "type": "shared",
+      "role": "inbox_admin",
+      "voltyReplyMode": "live",
+      "voltyModeChosen": true,
+      "voltyReplyModeSchedule": null,
+      "voltyLiveForNewContacts": false,
+      "voltyNewContactWindowDays": null,
+      "voltyStepBackMinutes": 5,
+      "voltyIsDefaultResponder": true,
+      "idleCloseAfterMinutes": 1440,
+      "idleCloseOwned": false,
+      "hasLiveChannel": true
+    },
+    {
+      "id": "nb0quc3izg1a",
+      "name": "Mohammad Ayaz",
+      "type": "individual",
+      "role": "inbox_admin",
+      "voltyReplyMode": null,
+      "voltyModeChosen": false,
+      "voltyReplyModeSchedule": null,
+      "voltyLiveForNewContacts": false,
+      "voltyNewContactWindowDays": null,
+      "voltyStepBackMinutes": 30,
+      "voltyIsDefaultResponder": false,
+      "idleCloseAfterMinutes": 1440,
+      "idleCloseOwned": false,
+      "hasLiveChannel": false
+    }
+  ],
+  "total": 3
+}

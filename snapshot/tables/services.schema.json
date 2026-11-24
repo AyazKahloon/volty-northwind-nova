@@ -1,0 +1,66 @@
+{
+  "table": {
+    "id": "bnkfhq6cmd9o",
+    "name": "services",
+    "description": "Northwind Creative's service catalog: what we offer, typical budget ranges, timelines and per-service budget floors. Read by Nova when answering pricing/service questions.",
+    "icon": null,
+    "agentLanes": [
+      "staff",
+      "customer"
+    ],
+    "agentWriteLanes": [
+      "staff"
+    ],
+    "customerOwner": null
+  },
+  "columns": [
+    {
+      "id": "yypt7qv5oba3dhr",
+      "key": "name",
+      "label": "Name",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "4u9pacjy1y23qgz",
+      "key": "description",
+      "label": "Description",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "boizb74zg3wxvj9",
+      "key": "typical_budget_range",
+      "label": "Typical budget range",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "jshmmgp6z79e121",
+      "key": "typical_timeline",
+      "label": "Typical timeline",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "84lyqi3t7o2bh8b",
+      "key": "min_viable_budget",
+      "label": "Minimum viable budget (SGD/mo)",
+      "type": "number",
+      "config": {},
+      "required": true
+    }
+  ],
+  "rowCount": 4,
+  "sharing": {
+    "mode": "open",
+    "level": "manage",
+    "canShare": true,
+    "grants": [],
+    "rowRule": null
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "automations": [
+    {
+      "id": "0tiuev5ub4j1",
+      "name": "hand-off-sla-safety-net",
+      "slug": "hand-off-sla-safety-net",
+      "origin": "tenant_authored",
+      "triggerKind": "schedule",
+      "triggerName": null,
+      "paused": false,
+      "deployed": true,
+      "riskClass": [
+        "C"
+      ],
+      "pendingApproval": false,
+      "lastRun": {
+        "status": "succeeded",
+        "createdAt": "2026-11-24T12:22:14.627Z"
+      },
+      "owner": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "nextRunAt": "2026-11-24T12:40:00.000Z",
+      "lastFiling": {
+        "at": "2026-11-24T11:18:56.311Z",
+        "requestedBy": {
+          "userId": "svueosu4am5cr7w",
+          "name": "Mohammad Ayaz"
+        }
+      },
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "needsYou": false,
+      "disconnectedChannelIds": [],
+      "pausedFor": null
+    },
+    {
+      "id": "up5r44vedwan",
+      "name": "leads-side-effects-updated",
+      "slug": "leads-side-effects-updated",
+      "origin": "tenant_authored",
+      "triggerKind": "event",
+      "triggerName": "row.updated",
+      "paused": false,
+      "deployed": true,
+      "riskClass": [
+        "C"
+      ],
+      "pendingApproval": false,
+      "lastRun": {
+        "status": "succeeded",
+        "createdAt": "2026-11-24T11:52:30.659Z"
+      },
+      "owner": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "nextRunAt": null,
+      "lastFiling": {
+        "at": "2026-11-24T11:09:31.127Z",
+        "requestedBy": {
+          "userId": "svueosu4am5cr7w",
+          "name": "Mohammad Ayaz"
+        }
+      },
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "needsYou": false,
+      "disconnectedChannelIds": [],
+      "pausedFor": null
+    },
+    {
+      "id": "eyvxjlezp8oi",
+      "name": "leads-side-effects-created",
+      "slug": "leads-side-effects-created",
+      "origin": "tenant_authored",
+      "triggerKind": "event",
+      "triggerName": "row.created",
+      "paused": false,
+      "deployed": true,
+      "riskClass": [
+        "C"
+      ],
+      "pendingApproval": false,
+      "lastRun": {
+        "status": "succeeded",
+        "createdAt": "2026-11-24T11:43:27.478Z"
+      },
+      "owner": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "nextRunAt": null,
+      "lastFiling": {
+        "at": "2026-11-24T11:09:21.207Z",
+        "requestedBy": {
+          "userId": "svueosu4am5cr7w",
+          "name": "Mohammad Ayaz"
+        }
+      },
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "needsYou": false,
+      "disconnectedChannelIds": [],
+      "pausedFor": null
+    },
+    {
+      "id": "q2y6n2t783st",
+      "name": "lead-warm-followup",
+      "slug": "lead-warm-followup",
+      "origin": "tenant_authored",
+      "triggerKind": "schedule",
+      "triggerName": null,
+      "paused": false,
+      "deployed": true,
+      "riskClass": [
+        "C"
+      ],
+      "pendingApproval": false,
+      "lastRun": {
+        "status": "succeeded",
+        "createdAt": "2026-11-24T11:05:34.615Z"
+      },
+      "owner": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "nextRunAt": "2026-11-25T04:00:00.000Z",
+      "lastFiling": {
+        "at": "2026-11-24T11:05:02.226Z",
+        "requestedBy": {
+          "userId": "svueosu4am5cr7w",
+          "name": "Mohammad Ayaz"
+        }
+      },
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "needsYou": false,
+      "disconnectedChannelIds": [],
+      "pausedFor": null
+    }
+  ],
+  "templates": [
+    {
+      "templateId": "stalled-deals",
+      "name": "Stalled deals nudge",
+      "triggerKind": "schedule",
+      "triggerName": "0 9 * * 1",
+      "orgStatus": "not_adapted"
+    },
+    {
+      "templateId": "appointment-reminder",
+      "name": "Appointment reminder",
+      "triggerKind": "schedule",
+      "triggerName": "0,30 9 * * *",
+      "orgStatus": "not_adapted"
+    },
+    {
+      "templateId": "monthly-broadcast",
+      "name": "Monthly broadcast",
+      "triggerKind": "schedule",
+      "triggerName": "0 10 1 * *",
+      "orgStatus": "not_adapted"
+    }
+  ]
+}

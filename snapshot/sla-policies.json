@@ -1,0 +1,40 @@
+{
+  "policies": [
+    {
+      "name": "Default",
+      "hoursMode": "business",
+      "replyMinutes": 60,
+      "resolveMinutes": null,
+      "priorityPercents": null,
+      "almostDueAlert": false,
+      "almostDueRecipients": {
+        "teamIds": [],
+        "userIds": []
+      },
+      "overdueAlert": false,
+      "overdueRecipients": {
+        "teamIds": [],
+        "userIds": []
+      },
+      "autoResolveOpenMinutes": 1440,
+      "autoResolvePendingMinutes": 4320,
+      "reopenWindowMinutes": 120,
+      "id": "3pkp4k7ocvys",
+      "isDefault": true,
+      "inboxes": [
+        {
+          "id": "nb0quc3izg1a",
+          "name": "Mohammad Ayaz"
+        },
+        {
+          "id": "1ncdj2ytemqq",
+          "name": "Northwind Creative Web Chat"
+        },
+        {
+          "id": "x2znw1az3vv4",
+          "name": "Sandbox"
+        }
+      ]
+    }
+  ]
+}

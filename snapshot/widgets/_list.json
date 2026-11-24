@@ -1,0 +1,12 @@
+{
+  "widgets": [
+    {
+      "id": "rws0x4hawz8v",
+      "name": "Northwind Creative Web Chat",
+      "target": "web_chat",
+      "channelInstanceId": "jm3dx6apti0e",
+      "channelInstanceName": "Northwind Creative Web Chat"
+    }
+  ],
+  "total": 1
+}

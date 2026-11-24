@@ -1,0 +1,34 @@
+{
+  "tables": [
+    {
+      "id": "bnkfhq6cmd9o",
+      "name": "services",
+      "description": "Northwind Creative's service catalog: what we offer, typical budget ranges, timelines and per-service budget floors. Read by Nova when answering pricing/service questions.",
+      "archivedAt": null
+    },
+    {
+      "id": "mgxbjl553lak",
+      "name": "faqs",
+      "description": "Frequently asked questions and answers for Northwind Creative. Read by Nova for pricing/process/results/contracts questions.",
+      "archivedAt": null
+    },
+    {
+      "id": "296blf6i15lc",
+      "name": "case_studies",
+      "description": "Fictional/anonymized composite case studies illustrating typical outcomes. Read by Nova when a lead asks about past results — never presented as a guarantee.",
+      "archivedAt": null
+    },
+    {
+      "id": "s1e46y1j2hx0",
+      "name": "leads",
+      "description": "Lead qualification records written live by Nova (one row per contact, updated not duplicated). A row-change automation applies the Contact Label and staff notification based on status.",
+      "archivedAt": null
+    },
+    {
+      "id": "ofu2lr7rtyqb",
+      "name": "knowledge_gaps",
+      "description": "Questions Nova could not answer from services/faqs/case_studies, logged for a human to fill in. Never used to answer PSG/EDG grant-eligibility questions - those are always logged here, never assessed.",
+      "archivedAt": null
+    }
+  ]
+}

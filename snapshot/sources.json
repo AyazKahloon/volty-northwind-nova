@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "id": "zyfrq8c65y08",
+      "kind": "website",
+      "name": "landing-page-one-eta-54.vercel.app",
+      "catalogId": null,
+      "toolkit": null,
+      "laneMask": [
+        "customer",
+        "staff",
+        "automation"
+      ],
+      "guideSkill": "source-landing-page-one-eta-54-vercel-app",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4BAMAAADLSivhAAAAHlBMVEUAAAD///+AgIAZGRnj4+OamppCQkK/v79iYmIwMDAbiFsVAAABJElEQVRYw+2XwQ2CQBBFDboEjx8V9YZWAIkNGBuQDrADS5AOtGNFRFABdz4XTebd32HzfibZwUBRFEVR/plh1EM2+x5yvOwhJ3PedYGUlkfAkZYzYEHLW2DKxnJwIyTlTS7v2FC5PCO3iTvco00hc7EOhRywoXKohXp4cOK2WcDEWpWyT4TaljKxUIMn8nMSV/KE2yYZy0WNlA3FLDSrywtum1QsBy+E8iNSsWNDic/JEG9E3DblsQ7vcsCGEi7UwwcnbpvSWKtP2ZcfEWKhBg3s5UdEfk6SJtky1hiNpGwo+4VmzXLAbVMQy0MLofyIyBaatMk+cUQk58S0y99jXdrlgA1ltVAPHaTcNu1iZV2yLz8i1gt1152c9beoKIqiKMrvcQUYtk0rnsXE5AAAAABJRU5ErkJggg==",
+      "createdAt": "2026-11-24T10:21:45.359Z",
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz",
+        "email": "ayazkahloon26@gmail.com",
+        "viaAgent": false
+      },
+      "failing": null,
+      "lastError": null,
+      "status": "active",
+      "next": "none",
+      "product": null,
+      "scopeSummary": "1 page, indexed 2h ago",
+      "identity": "1 page, indexed 2h ago",
+      "signedInAs": null,
+      "lastSyncedAt": "2026-11-24T10:21:45.859Z"
+    }
+  ]
+}

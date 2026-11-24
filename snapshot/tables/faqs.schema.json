@@ -1,0 +1,50 @@
+{
+  "table": {
+    "id": "mgxbjl553lak",
+    "name": "faqs",
+    "description": "Frequently asked questions and answers for Northwind Creative. Read by Nova for pricing/process/results/contracts questions.",
+    "icon": null,
+    "agentLanes": [
+      "staff",
+      "customer"
+    ],
+    "agentWriteLanes": [
+      "staff"
+    ],
+    "customerOwner": null
+  },
+  "columns": [
+    {
+      "id": "f6egqxtn4l7ggja",
+      "key": "question",
+      "label": "Question",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "sg3ssao2jakn3fa",
+      "key": "answer",
+      "label": "Answer",
+      "type": "text",
+      "config": {},
+      "required": true
+    },
+    {
+      "id": "dkcjrgqo9lg0fra",
+      "key": "topic",
+      "label": "Topic",
+      "type": "text",
+      "config": {},
+      "required": true
+    }
+  ],
+  "rowCount": 9,
+  "sharing": {
+    "mode": "open",
+    "level": "manage",
+    "canShare": true,
+    "grants": [],
+    "rowRule": null
+  }
+}
