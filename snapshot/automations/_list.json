@@ -1,6 +1,43 @@
 {
   "automations": [
     {
+      "id": "maky4640fdji",
+      "name": "daily-qa-scan",
+      "slug": "daily-qa-scan",
+      "origin": "tenant_authored",
+      "triggerKind": "schedule",
+      "triggerName": null,
+      "paused": false,
+      "deployed": true,
+      "riskClass": [
+        "C"
+      ],
+      "pendingApproval": false,
+      "lastRun": {
+        "status": "succeeded",
+        "createdAt": "2026-11-24T14:16:28.443Z"
+      },
+      "owner": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "nextRunAt": "2026-11-25T03:00:00.000Z",
+      "lastFiling": {
+        "at": "2026-11-24T14:16:08.841Z",
+        "requestedBy": {
+          "userId": "svueosu4am5cr7w",
+          "name": "Mohammad Ayaz"
+        }
+      },
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "needsYou": false,
+      "disconnectedChannelIds": [],
+      "pausedFor": null
+    },
+    {
       "id": "0tiuev5ub4j1",
       "name": "hand-off-sla-safety-net",
       "slug": "hand-off-sla-safety-net",
