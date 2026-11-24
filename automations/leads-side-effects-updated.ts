@@ -83,10 +83,17 @@ export default defineAutomation({
       const hotBudget = typeof ctx.params.hotBudget === 'number' ? ctx.params.hotBudget : 3000
       const escalateBudget = typeof ctx.params.escalateBudget === 'number' ? ctx.params.escalateBudget : 10000
 
-      const computed =
-        serviceNeeded.length === 0
-          ? null
-          : computeLeadStatus({ monthlyBudgetSgd: budget, timelineDays, serviceOffered, minViableBudget, hotBudget, escalateBudget })
+      // An empty service_needed means "not stated yet", not "stated and not offered" —
+      // computeLeadStatus's !serviceOffered branch can't tell those apart on its own (a real
+      // lead with a 15k/mo budget and no stated service yet got no status at all, missing the
+      // "escalation-tier budget wins over everything" rule, until this fix). When nothing was
+      // stated, pass serviceOffered=true (neutral — never rejects for a reason that didn't
+      // happen) so only a real mismatch (service stated, not found) can trigger not-fit; skip
+      // scoring entirely only when there's truly nothing to go on (service AND budget unknown).
+      const serviceOfferedForScoring = serviceNeeded.length === 0 ? true : serviceOffered
+      const computed = serviceNeeded.length === 0 && budget === null
+        ? null
+        : computeLeadStatus({ monthlyBudgetSgd: budget, timelineDays, serviceOffered: serviceOfferedForScoring, minViableBudget, hotBudget, escalateBudget })
 
       status = computed
     }

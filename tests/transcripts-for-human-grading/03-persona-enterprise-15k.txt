@@ -1,0 +1,28 @@
+2026-11-24T13:54:15.151Z │ msg contact/public · "Hello, I'm the marketing director for a regional retail chain with 40 stores. We're looking for a complete digital mark…"
+2026-11-24T13:54:17.046Z │ session psacsqkyv9kx · wake · start
+2026-11-24T13:54:23.263Z │ op tables get · bash · ran · sess psacsqkyv9kx · 22ms
+2026-11-24T13:54:23.343Z │ op rows query · bash · ran · sess psacsqkyv9kx · 42ms
+2026-11-24T13:54:23.439Z │ op rows query · bash · ran · sess psacsqkyv9kx · 36ms
+2026-11-24T13:54:25.483Z │ op rows get · bash · ran · sess psacsqkyv9kx · 30ms
+2026-11-24T13:54:25.574Z │ op rows get · bash · ran · sess psacsqkyv9kx · 46ms
+2026-11-24T13:54:25.676Z │ op rows get · bash · ran · sess psacsqkyv9kx · 28ms
+2026-11-24T13:54:25.764Z │ op rows get · bash · ran · sess psacsqkyv9kx · 29ms
+2026-11-24T13:54:40.553Z │ op rows insert · bash · ran · sess psacsqkyv9kx · 191ms
+2026-11-24T13:54:43.283Z │ op rows query · bash · ran · sess psacsqkyv9kx · 38ms
+2026-11-24T13:54:46.555Z │ op rows get · bash · ran · sess psacsqkyv9kx · 24ms
+2026-11-24T13:54:49.947Z │ msg agent/public · "I'm Northwind Creative's AI assistant.
+
+Thanks. Northwind handles Meta Ads, Google Ads, social media management and web…"
+2026-11-24T13:54:49.947Z │ op messaging send · tool · ran · sess psacsqkyv9kx · 157ms
+2026-11-24T13:55:07.738Z │ op debug trace · http · ran · 793ms
+2026-11-24T13:57:01.003Z │ msg contact/public · "We need everything really - Meta, Google, social, the works. What's your process for enterprise clients?"
+2026-11-24T13:57:06.157Z │ op rows query · bash · ran · sess psacsqkyv9kx · 26ms
+2026-11-24T13:57:06.221Z │ op rows query · bash · ran · sess psacsqkyv9kx · 27ms
+2026-11-24T13:57:09.396Z │ op rows get · bash · ran · sess psacsqkyv9kx · 13ms
+2026-11-24T13:57:09.448Z │ op rows get · bash · ran · sess psacsqkyv9kx · 15ms
+2026-11-24T13:57:14.202Z │ op rows update · bash · ran · sess psacsqkyv9kx · 119ms
+2026-11-24T13:57:15.883Z │ op rows get · bash · ran · sess psacsqkyv9kx · 16ms
+2026-11-24T13:57:18.885Z │ msg agent/public · "**Volty**
+Most services can kick off within 1–2 weeks of signing; website design typically takes 3–5 weeks end to end. …"
+2026-11-24T13:57:18.885Z │ op messaging send · tool · ran · sess psacsqkyv9kx · 198ms
+2026-11-24T13:57:21.915Z │ session psacsqkyv9kx · wake · last-activity · awaiting_input/ok

@@ -1,0 +1,10 @@
+2026-11-24T14:01:50.071Z │ msg contact/public · "can claim PSG grant for this ad spend or not"
+2026-11-24T14:02:03.740Z │ session fravgd5542wf · wake · start
+2026-11-24T14:02:12.369Z │ op rows query · bash · ran · sess fravgd5542wf · 45ms
+2026-11-24T14:02:12.464Z │ op rows query · bash · ran · sess fravgd5542wf · 36ms
+2026-11-24T14:02:12.553Z │ op rows insert · bash · ran · sess fravgd5542wf · 96ms
+2026-11-24T14:02:15.029Z │ msg agent/public · "I'm Northwind Creative's AI assistant.
+
+Good question. I’ll flag this for our team to confirm rather than guess about P…"
+2026-11-24T14:02:15.029Z │ op messaging send · tool · ran · sess fravgd5542wf · 147ms
+2026-11-24T14:02:18.705Z │ session fravgd5542wf · wake · last-activity · awaiting_input/ok

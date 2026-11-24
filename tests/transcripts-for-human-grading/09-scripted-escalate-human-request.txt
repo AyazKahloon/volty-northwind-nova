@@ -1,0 +1,10 @@
+2026-11-24T14:01:24.475Z │ msg contact/public · "Can I just talk to a real person please"
+2026-11-24T14:01:26.687Z │ session 0ev4qaiq1dkc · wake · start
+2026-11-24T14:01:31.106Z │ msg system/internal · "changed the reply mode to Draft from the contact's next message"
+2026-11-24T14:01:31.106Z │ msg agent/internal · "I passed this conversation to the team: the contact asked for a person. Nobody was seated. Of the 2 staff who take conv…"
+2026-11-24T14:01:31.106Z │ op conversations hand-to-team · tool · ran · sess 0ev4qaiq1dkc · 394ms
+2026-11-24T14:01:34.460Z │ msg agent/public · "I'm Northwind Creative's AI assistant.
+
+I’ve passed this to the team. Someone will follow up with you here."
+2026-11-24T14:01:34.460Z │ op messaging send · tool · ran · sess 0ev4qaiq1dkc · 154ms
+2026-11-24T14:01:38.109Z │ session 0ev4qaiq1dkc · wake · last-activity · awaiting_input/ok
