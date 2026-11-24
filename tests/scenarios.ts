@@ -57,6 +57,8 @@ export const scenarios: Scenario[] = [
       { kind: 'field', field: 'status', equals: 'warm' },
       { kind: 'label', value: 'warm' },
       { kind: 'noLabel', value: 'hot' },
+      { kind: 'noLabel', value: 'escalated' }, // negative: a normal warm lead must never hand over
+      { kind: 'replyNotContains', text: 'calendly.com' }, // negative: no booking link for warm
     ],
   },
   {

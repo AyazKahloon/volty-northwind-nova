@@ -42,4 +42,13 @@ export default defineParams({
     label: 'Minutes an escalated lead may wait with no staff reply before a holding message + re-notify fires',
     default: 15,
   },
+  // NOT YET LIVE: declaring a new param needs `volty push`, which is blocked (docs/BUGS.md #11).
+  // Business hours are hardcoded as plain text in instructions/org.md for now (still editable
+  // live via `instructions update`) — this declaration is ready to deploy once push is fixed,
+  // at which point the hardcoded text should be replaced with {params.businessHours} reads.
+  businessHours: {
+    type: 'text',
+    label: 'Business hours Nova quotes for after-hours follow-up (e.g. "Mon-Fri 10:00-18:00 SGT")',
+    default: 'Mon-Fri 10:00-18:00 SGT',
+  },
 })

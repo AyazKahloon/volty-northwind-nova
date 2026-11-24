@@ -206,9 +206,39 @@
         "granularity": "datetime"
       },
       "required": false
+    },
+    {
+      "id": "aai5gywegbhx5yw",
+      "key": "do_not_contact",
+      "label": "Do not contact (PDPA opt-out)",
+      "type": "boolean",
+      "config": {},
+      "required": false
+    },
+    {
+      "id": "p7ta3mvnh3pfcah",
+      "key": "outcome",
+      "label": "Outcome (staff-set)",
+      "type": "enum",
+      "config": {
+        "options": [
+          "won",
+          "lost",
+          "no_show"
+        ]
+      },
+      "required": false
+    },
+    {
+      "id": "oydlpt7n5giru9n",
+      "key": "not_fit_reason",
+      "label": "Not-fit reason (staff-set)",
+      "type": "text",
+      "config": {},
+      "required": false
     }
   ],
-  "rowCount": 30,
+  "rowCount": 37,
   "sharing": {
     "mode": "open",
     "level": "manage",

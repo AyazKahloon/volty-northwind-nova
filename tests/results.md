@@ -1,14 +1,13 @@
-# Test results (dev-mode single run)
+# Test results (1x run)
 
-Run at 2026-11-24T11:43:35.971Z
+Run at 2026-11-24T13:38:10.402Z
 
-| Scenario | Result | Cost | Failures |
+| Scenario | Pass rate | Avg cost | Failures |
 |---|---|---|---|
-| warm-good-fit-not-ready | PASS | $0.0051 | - |
-| not-fit-low-budget | PASS | $0.0067 | - |
-| not-fit-service-not-offered | PASS | $0.0051 | - |
-| escalate-big-budget | PASS | $0.0056 | - |
-| escalate-explicit-human-request | PASS | $0.0052 | - |
+| not-fit-low-budget | 1/1 | $0.0058 | - |
 
-Total cost: $0.0278
-Credits spent this batch: 12
+Total cost: $0.0058
+Credits spent this batch: 2
+Credits per conversation: 2.0
+Avg time to first reply: 20.2s
+Avg time from status=hot/escalated to staff notification: n/as (industry B2B average lead response: ~42 hours = 151200s)

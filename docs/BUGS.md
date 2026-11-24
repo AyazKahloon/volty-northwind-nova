@@ -58,6 +58,7 @@ Each entry: what broke, how it was caught, the fix. All found via live testing (
 **Caught:** the first full 12-scenario batch reported 4 false failures (`status=undefined`, `labels=[]`) for scenarios that, on manual re-run in isolation, scored correctly.
 **Cause:** `tests/run-scenarios.ts` waited a fixed 6s before grading end state. That was enough in isolation but not once several scenarios' automation triggers queued up back-to-back in a full batch.
 **Fix:** poll for `row.status` (ceiling 20s) instead of a fixed sleep. All 5 previously-"failing" scenarios passed cleanly once re-run with the fix — confirming the earlier failures were the harness, not the product.
+**Reinforced:** recurred during a `--runs=3` validation batch that happened to run concurrently with several other live deploys (`instructions update`, `automations update-source`, `tables update-column`) — `not-fit-low-budget` scored 1/3 instead of 3/3, then passed cleanly in isolation immediately after. The 20s ceiling isn't enough when other live ops are competing for the same backend queue. **Takeaway: never run a test batch at the same time as live deploys** — this isn't a flaw in the fix, it's an operating constraint on how this test harness is used.
 
 ## 10. Nova calls the native hand-off tool on her own initiative — non-deterministically
 **Caught:** `test-human-1` (before the prohibition was added) and `test-sla-1` (**after** the prohibition was added and pushed) — same input, different behavior across two separate conversations.

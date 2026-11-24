@@ -111,6 +111,29 @@ main {
   margin: 0 auto;
 }
 
+.about-nova {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-nova h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-nova p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
 footer {
   text-align: center;
   padding: 2rem;

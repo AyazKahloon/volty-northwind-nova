@@ -48,6 +48,13 @@ export default defineAutomation({
         if (seen.has(row.id)) continue
         seen.add(row.id)
 
+        // PDPA: a lead that asked not to be contacted is never flagged for follow-up, staff
+        // reminder included — the row stays as-is so it isn't picked up again next run either.
+        if (row.fields.do_not_contact === true) {
+          skipped += 1
+          continue
+        }
+
         const lastTouch = typeof row.fields.last_followup_at === 'string' ? row.fields.last_followup_at : row.createdAt
         if (new Date(lastTouch).getTime() > cutoffMs) continue // not due yet
 
@@ -61,9 +68,13 @@ export default defineAutomation({
         const service = typeof row.fields.service_needed === 'string' ? row.fields.service_needed : 'an unspecified service'
         const summary = typeof row.fields.qualification_summary === 'string' ? row.fields.qualification_summary : ''
 
+        // The "opt-out line every follow-up email includes" requirement is carried here as an
+        // instruction to the human sending the actual email (we don't send it ourselves — see
+        // the channel_none note above), since staff.notify is a one-line internal bell, not an
+        // email to the lead.
         await ctx.volty.staff.notify({
           userId: STAFF_USER_ID,
-          message: `Follow-up due: ${name} — ${service}, warm for ${followupDays}+ days. Email on file. ${summary}`.slice(0, 500),
+          message: `Follow-up due: ${name} — ${service}, warm for ${followupDays}+ days. Email on file. Include an unsubscribe/opt-out line in your email. ${summary}`.slice(0, 500),
         })
 
         flaggedRows.push({ id: row.id, fields: { last_followup_at: now } })
