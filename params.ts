@@ -30,12 +30,18 @@ export default defineParams({
   },
   careersEmail: {
     type: 'text',
-    // Default deliberately NOT an email literal: an email-shaped param default gets tokenized
-    // by Volty, and push then fails on every future push with "no longer has on record" since
-    // that token can't resolve to a real contact. Found live, blocked all pushes until fixed —
-    // see docs/BUGS.md. Set the real address with `params set-value` after push, not here.
-    label: 'Email address Nova points job-seekers to (set live via params set-value, not here)',
-    default: 'not yet set — ask an admin to set careersEmail',
+    // Still gets tokenized the instant Volty stores it (confirmed live: even this literal
+    // becomes `pii:...` the moment it's set) — see docs/BUGS.md #11. That tokenization is not
+    // itself what blocks `push`, though: push kept failing with the identical "no longer has on
+    // record" error even after this value AND its live override were both swapped for a
+    // non-email placeholder, which rules out careersEmail as the cause. The real source is
+    // almost certainly dangling `pii:` tokens left in table data (e.g. `leads.email`) by sandbox
+    // test contacts that `debug sandbox-cleanup` later deleted — a workspace-wide `push` scans
+    // everything, not just this file. Kept as a real literal here since the type intent is a
+    // real email either way, and the live value (set via `params set-value`, not push) is
+    // correct and in effect regardless of whether push ever works.
+    label: 'Email address Nova points job-seekers to',
+    default: 'careers@northwindcreative.sg',
   },
   slaMinutes: {
     type: 'number',
