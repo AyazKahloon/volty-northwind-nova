@@ -1,6 +1,43 @@
 {
   "automations": [
     {
+      "id": "5bel1pozsq5e",
+      "name": "qa-scan-seed-test",
+      "slug": "qa-scan-seed-test",
+      "origin": "tenant_authored",
+      "triggerKind": "schedule",
+      "triggerName": null,
+      "paused": true,
+      "deployed": true,
+      "riskClass": [
+        "C"
+      ],
+      "pendingApproval": false,
+      "lastRun": {
+        "status": "succeeded",
+        "createdAt": "2026-11-24T15:44:43.137Z"
+      },
+      "owner": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "nextRunAt": null,
+      "lastFiling": {
+        "at": "2026-11-24T15:44:11.817Z",
+        "requestedBy": {
+          "userId": "svueosu4am5cr7w",
+          "name": "Mohammad Ayaz"
+        }
+      },
+      "createdBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "needsYou": false,
+      "disconnectedChannelIds": [],
+      "pausedFor": null
+    },
+    {
       "id": "77l80pu4kli4",
       "name": "handoff-convergence",
       "slug": "handoff-convergence",
@@ -15,7 +52,7 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T15:20:38.665Z"
+        "createdAt": "2026-11-24T15:42:30.802Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",
@@ -52,7 +89,7 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T14:16:28.443Z"
+        "createdAt": "2026-11-24T15:44:56.428Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",
@@ -89,13 +126,13 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T15:32:22.360Z"
+        "createdAt": "2026-11-24T15:47:24.997Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",
         "name": "Mohammad Ayaz"
       },
-      "nextRunAt": "2026-11-24T15:45:00.000Z",
+      "nextRunAt": "2026-11-24T15:50:00.000Z",
       "lastFiling": {
         "at": "2026-11-24T15:38:11.227Z",
         "requestedBy": {
@@ -126,7 +163,7 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T15:30:37.431Z"
+        "createdAt": "2026-11-24T15:47:17.406Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",
@@ -163,7 +200,7 @@
       "pendingApproval": false,
       "lastRun": {
         "status": "succeeded",
-        "createdAt": "2026-11-24T15:30:36.685Z"
+        "createdAt": "2026-11-24T15:47:16.666Z"
       },
       "owner": {
         "userId": "svueosu4am5cr7w",

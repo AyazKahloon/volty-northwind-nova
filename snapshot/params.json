@@ -10,9 +10,12 @@
       "options": null,
       "default": 3000,
       "value": 3000,
-      "isDefault": true,
-      "setBy": null,
-      "setAt": null
+      "isDefault": false,
+      "setBy": {
+        "userId": "svueosu4am5cr7w",
+        "name": "Mohammad Ayaz"
+      },
+      "setAt": "2026-11-24T15:46:44.290Z"
     },
     {
       "inbox": null,
