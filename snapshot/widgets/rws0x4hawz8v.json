@@ -273,7 +273,33 @@
         "showing": false
       }
     ],
-    "quickPaths": null,
+    "quickPaths": [
+      {
+        "label": "Meta Ads",
+        "to": "budgetMeta",
+        "taps": 0
+      },
+      {
+        "label": "Google Ads",
+        "to": "budgetGoogle",
+        "taps": 0
+      },
+      {
+        "label": "Social Media Mgmt",
+        "to": "budgetSocial",
+        "taps": 0
+      },
+      {
+        "label": "Website Design",
+        "to": "budgetWebsite",
+        "taps": 0
+      },
+      {
+        "label": "Something else",
+        "to": "volty",
+        "taps": 0
+      }
+    ],
     "suggestions": [],
     "taps": {}
   },

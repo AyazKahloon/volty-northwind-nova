@@ -1,2 +1,2 @@
-Snapshotted at 2026-11-24T14:17:56.584Z from workspace 3vdy1kmdwel0.
+Snapshotted at 2026-11-24T14:20:49.432Z from workspace 3vdy1kmdwel0.
 volty push/pull are blocked (see docs/BUGS.md #11, docs/VOLTY_BUG_REPORT.md) — this snapshot is the substitute for `volty pull` until that's fixed.
