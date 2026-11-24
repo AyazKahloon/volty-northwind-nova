@@ -1,0 +1,19 @@
+Read-only. What this workspace holds outside the project as of the last volty pull: data Volty and staff write in the app, and what has no project file yet. Editing this file changes nothing, and volty pull rewrites it.
+
+Sources with no file yet (website, API and sync sources)
+- landing-page-one-eta-54.vercel.app (website)
+
+Automations not deployed
+- template-appointment-reminder: no version is running
+- template-monthly-broadcast: no version is running
+- template-stalled-deals: no version is running
+
+Drive files (the workspace Drive, which the project does not hold)
+- /skills/source-landing-page-one-eta-54-vercel-app/SKILL.md
+
+Tables (their rows stay in the workspace)
+- services
+- faqs
+- case_studies
+- leads
+- knowledge_gaps

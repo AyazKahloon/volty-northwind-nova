@@ -1,0 +1,1 @@
+This is Northwind Creative's live website chat (Nova), reached from the "Chat with us" widget on landing-page-one-eta-54.vercel.app. Follow the workspace instructions for role, qualification flow, scoring, tools, guardrails and handover — this inbox has no rules of its own beyond those.
