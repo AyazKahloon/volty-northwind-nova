@@ -27,7 +27,10 @@
     "googleAnalytics": false,
     "showQr": true,
     "googleTag": null,
-    "seen": null,
+    "seen": {
+      "at": "2026-11-24T14:25:08.476719+00:00",
+      "origin": "https://landing-page-one-eta-54.vercel.app"
+    },
     "pausedAt": null,
     "cardTitle": "Northwind Creative",
     "launcherLabel": "Let's chat",
@@ -208,7 +211,10 @@
     }
   ],
   "embedSnippet": "<script async src=\"https://volty.voltade.com/widget/v1.js\" data-widget-id=\"0oc6vohhha1yscspq6ghl\"></script>",
-  "lastStarted": null,
+  "lastStarted": {
+    "at": "2026-11-24T14:36:22.827Z",
+    "origin": "https://landing-page-one-eta-54.vercel.app"
+  },
   "chatPageUrl": "https://volty.voltade.com/chat/0oc6vohhha1yscspq6ghl",
   "opening": {
     "shortcuts": [
@@ -277,7 +283,7 @@
       {
         "label": "Meta Ads",
         "to": "budgetMeta",
-        "taps": 0
+        "taps": 1
       },
       {
         "label": "Google Ads",
@@ -301,7 +307,9 @@
       }
     ],
     "suggestions": [],
-    "taps": {}
+    "taps": {
+      "path:Meta Ads": 1
+    }
   },
   "platformPausedAt": null,
   "siteRead": {
