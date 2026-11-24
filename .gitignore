@@ -5,3 +5,32 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 *.tsbuildinfo
+
+# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+.volty/auth*
+.volty/token*
+.volty/credentials*
+volty-auth*.json
+
+# Vercel
+.vercel/
+landing-page/.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Research dumps / scratch (never belong in this project folder)
+llms_full.txt
+volty_help.txt
+ops_grep.txt
+automations_authoring.txt
+*.scratch.*
